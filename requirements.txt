@@ -1,0 +1,9 @@
+langchain
+langgraph
+langchain-openai
+langchain-community
+web3
+python-dotenv
+streamlit
+pandas
+requests
