@@ -41,26 +41,6 @@ A built-in dashboard displays:
 
 ---
 
-## Architecture
-
-```text
-User Input
-    ↓
-AI Agent
-    ↓
-Encrypt Memory (Fernet)
-    ↓
-Local Vault File
-    ↓
-Sync to 0G Storage
-    ↓
-Store Root Hash in SQLite
-    ↓
-Recovery via Agent Selection
-```
-
----
-
 ## Tech Stack
 
 - Python
@@ -70,25 +50,6 @@ Recovery via Agent Selection
 - requests
 - Web3.py
 - 0G Storage API
-
----
-
-## Project Structure
-
-```text
-sovereign-vault/
-├── app.py
-├── vault_utils.py
-├── vault_index_db.py
-├── og_sync.py
-├── contract_utils.py
-├── crypto_utils.py
-├── data/
-│   └── vaults/
-├── vault_index.db
-├── requirements.txt
-└── README.md
-```
 
 ---
 
@@ -113,47 +74,6 @@ When local storage is missing:
 4. Encrypted vault pulled from 0G
 5. Local vault recreated
 6. Agent resumes with full memory
-
----
-
-## Installation
-
-Clone the repository:
-
-```bash
-git clone <repo-url>
-cd sovereign-vault
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run:
-
-```bash
-streamlit run app.py
-```
-
----
-
-## Environment Variables
-
-Create a `.env` file:
-
-```env
-MEMORY_ENCRYPTION_KEY=your_generated_key
-RPC_URL=your_0g_rpc_url
-PRIVATE_KEY=your_wallet_private_key
-```
-
-Generate encryption key:
-
-```bash
-python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
-```
 
 ---
 
@@ -194,7 +114,7 @@ This makes it possible to combine:
 
 ---
 
-## Hackathon Vision
+## Vision
 
 SovereignVault demonstrates how AI agents can own persistent, encrypted, portable memory using decentralized infrastructure.
 
@@ -206,7 +126,3 @@ This creates a future where autonomous agents are:
 - trust-minimized
 
 ---
-
-## License
-
-MIT License
