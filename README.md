@@ -10,37 +10,44 @@ It combines **real-time DeFi data**, **onchain execution**, and a **LangGraph-po
 
 ## ✨ Key Features
 
-- **🧠 Autonomous AI Agent**: Powered by LangGraph + OpenRouter
-- **📡 Real-time Yield Intelligence**: Fetches live APYs from DefiLlama across Arbitrum protocols
-- **⚡ One-Click Smart Supply**: Automatically supplies to the best protocol
-- **🔄 Safe Withdrawals** — Full withdraw support from Aave
-- **📊 Live Dashboard** — Balances, APY metrics, TVL, and cumulative supply history
-- **📜 Persistent History** — SQLite-backed supply/withdraw log with interactive charts
-- **💬 Natural Language Chat** — Talk to your agent like a human
-- **🛡️ Testnet Safety** — Built exclusively for Arbitrum Sepolia
-
-## 🖥️ Screenshots
-
-*(Add screenshots here after running the app)*
-
+- **Autonomous AI Agent**: Powered by LangGraph + OpenRouter
+- **Real-time Yield Intelligence**: Fetches live APYs from DefiLlama across Arbitrum protocols
+- **One-Click Smart Supply**: Automatically supplies to the best protocol
+- **Safe Withdrawals**: Full withdraw support from Aave
+- **Live Dashboard**: Balances, APY metrics, TVL and cumulative supply history
+- **Persistent History**: SQLite-backed supply/withdraw log with interactive charts
+- **Natural Language Chat**: Talk to your agent like a human
+- **Testnet Safety**: Built exclusively for Arbitrum (Sepolia for now) 
 - Chat Interface
 - Live Dashboard with metrics and history chart
 
 ## 🛠️ Tech Stack
 
-| Layer              | Technology                          |
-|--------------------|-------------------------------------|
-| Frontend           | Streamlit                           |
-| Agent Framework    | LangGraph + LangChain               |
-| LLM                | OpenRouter (free tier models)       |
-| Blockchain         | Web3.py + Arbitrum Sepolia          |
-| Yield Data         | DefiLlama API                       |
-| Database           | SQLite3                             |
-| Smart Contracts    | Aave V3 (via direct calls)          |
+- **Agent Framework** - LangGraph + LangChain
+- **LLM** - OpenRouter
+- **Blockchain** - Web3.py + Arbitrum Sepolia
+- **Yield Data** - DefiLlama API
+- **Database** - SQLite3
+- **Smart Contracts** - Aave V3 (via direct calls)
 
-## 🚀 Quick Start
+##  How It Works
+1. User chats with the agent (e.g., "Supply 1000 USDC")
+2. Agent uses tools:
+   - fetch_yield_data() → checks current best yields
+   - check_wallet_balance() → verifies funds
+   - execute_supply_best() → approves + supplies to Aave
+3. Onchain execution via Web3.py with proper EIP-1559 gas
+4. History & metrics automatically logged and visualized
 
-### 1. Clone the Repository
-```bash
-git clone <your-repo-url>
-cd arbitrum-yieldguard
+## Future Roadmap
+- Multi-protocol auto-selection (Aave + Spark + others)
+- Agent-to-agent negotiation
+- Onchain reputation & performance tracking
+- Account Abstraction (ERC-4337) integration for gas sponsorship
+- Cross-chain yield opportunities
+- Risk-aware rebalancing logic
+- Deployment as a persistent onchain agent
+
+
+
+
