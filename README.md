@@ -1,128 +1,46 @@
-# SovereignVault
+# 🛡️ Arbitrum YieldGuard Agent
 
-SovereignVault is a decentralized encrypted memory infrastructure for autonomous AI agents, built on the [0G ecosystem](https://0g.ai?utm_source=chatgpt.com).
+**Autonomous AI Yield Optimizer for Arbitrum**  
 
-It enables AI agents to securely store, synchronize, and recover private memory across devices while maintaining user ownership and sovereignty.
+## 🎯 Overview
 
-## Overview
+**Arbitrum YieldGuard** is an autonomous economic agent that intelligently manages USDC yield on Arbitrum.
 
-Modern AI agents often lose context when applications restart or local storage is wiped. SovereignVault solves this by giving each agent:
+It combines **real-time DeFi data**, **onchain execution**, and a **LangGraph-powered AI agent** so users can simply chat with it, e.g., “Supply 500 USDC to the best yield”, and the agent handles research, decision-making, approvals, and transactions securely.
 
-- Private encrypted memory
-- Local persistence
-- Decentralized backup on 0G Storage
-- Automatic recovery from 0G
-- Sync monitoring dashboard
+## ✨ Key Features
 
-This creates a sovereign memory layer for AI agents that is portable, tamper-resistant, and user-controlled.
+- **🧠 Autonomous AI Agent**: Powered by LangGraph + OpenRouter
+- **📡 Real-time Yield Intelligence**: Fetches live APYs from DefiLlama across Arbitrum protocols
+- **⚡ One-Click Smart Supply**: Automatically supplies to the best protocol
+- **🔄 Safe Withdrawals** — Full withdraw support from Aave
+- **📊 Live Dashboard** — Balances, APY metrics, TVL, and cumulative supply history
+- **📜 Persistent History** — SQLite-backed supply/withdraw log with interactive charts
+- **💬 Natural Language Chat** — Talk to your agent like a human
+- **🛡️ Testnet Safety** — Built exclusively for Arbitrum Sepolia
 
----
+## 🖥️ Screenshots
 
-## Core Features
+*(Add screenshots here after running the app)*
 
-### Encrypted Agent Memory
-Each agent stores memories in an encrypted vault using Fernet symmetric encryption.
+- Chat Interface
+- Live Dashboard with metrics and history chart
 
-### Local Fast Storage
-Encrypted vaults are cached locally for fast access.
+## 🛠️ Tech Stack
 
-### 0G Decentralized Sync
-Encrypted vault files are automatically uploaded to 0G storage.
+| Layer              | Technology                          |
+|--------------------|-------------------------------------|
+| Frontend           | Streamlit                           |
+| Agent Framework    | LangGraph + LangChain               |
+| LLM                | OpenRouter (free tier models)       |
+| Blockchain         | Web3.py + Arbitrum Sepolia          |
+| Yield Data         | DefiLlama API                       |
+| Database           | SQLite3                             |
+| Smart Contracts    | Aave V3 (via direct calls)          |
 
-### Automatic Recovery
-If a local vault is missing, users can restore it from 0G by selecting the agent and clicking recover.
+## 🚀 Quick Start
 
-### Sync Status Dashboard
-A built-in dashboard displays:
-
-- Agent sync status
-- Last sync time
-- 0G root hash references
-
----
-
-## Tech Stack
-
-- Python
-- Streamlit
-- SQLite
-- cryptography
-- requests
-- Web3.py
-- 0G Storage API
-
----
-
-## How It Works
-
-### Save Memory
-
-When an agent stores memory:
-
-1. Memory is encrypted locally
-2. Saved to local vault file
-3. Uploaded to 0G storage
-4. Root hash saved in SQLite index
-
-### Restore Memory
-
-When local storage is missing:
-
-1. User selects agent
-2. Clicks **Restore Vault**
-3. Root hash fetched from SQLite
-4. Encrypted vault pulled from 0G
-5. Local vault recreated
-6. Agent resumes with full memory
-
----
-
-## Use Cases
-
-SovereignVault can power:
-
-- AI personal assistants
-- autonomous trading agents
-- decentralized copilots
-- private agent marketplaces
-- persistent AI identities
-- multi-agent collaboration systems
-
----
-
-## Why 0G
-
-SovereignVault uses 0G because it offers infrastructure designed for decentralized AI applications.
-
-This makes it possible to combine:
-
-- verifiable storage
-- decentralized persistence
-- AI-native architecture
-- user-owned memory
-
----
-
-## Future Roadmap
-
-- Versioned memory snapshots
-- Semantic memory search
-- Agent-to-agent memory sharing
-- Wallet-derived encryption keys
-- Cross-device sovereign recovery
-- On-chain memory proofs
-
----
-
-## Vision
-
-SovereignVault demonstrates how AI agents can own persistent, encrypted, portable memory using decentralized infrastructure.
-
-This creates a future where autonomous agents are:
-
-- sovereign
-- recoverable
-- user-controlled
-- trust-minimized
-
----
+### 1. Clone the Repository
+```bash
+git clone <your-repo-url>
+cd arbitrum-yieldguard
